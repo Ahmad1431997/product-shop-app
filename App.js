@@ -1,13 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Home from "./components/Home"
+import ShopList from './components/ShopList';
+import { Provider } from "react-redux";
+import store from "./store/reducers/index";
+import { NativeBaseProvider } from 'native-base';
+import ShopDetail from './components/ShopDetail';
 
 export default function App() {
   return (
+      <Provider store={store}>
+        <NativeBaseProvider>
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+
+      <ShopDetail/>
+      {/* <Home /> */}
+      {/* <ShopList/> */}
+      {/* <Text>Open up App.js to start working on your app!</Text> */}
       <StatusBar style="auto" />
     </View>
+        </NativeBaseProvider>
+      </Provider>
   );
 }
 
@@ -18,4 +33,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+ 
 });
