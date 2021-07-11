@@ -15,8 +15,8 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <ShopDetail/>
-      {/* <Home /> */}
+      {/* <ShopDetail/> */}
+      <Home />
       {/* <ShopList/> */}
       {/* <Text>Open up App.js to start working on your app!</Text> */}
       <StatusBar style="auto" />

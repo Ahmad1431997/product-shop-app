@@ -8,7 +8,7 @@ const ShopDetail = () => {
     const shop = useSelector((state) => state.shops.shops[0])
     console.log(shop)
     // const productsFromProductsStore=shop.products.map((product)=>products.find((_product)=>(product.id===_product.id)))
-    const productsFromProductsStore =shop.products.map((product)=>getProductById(product.id,products))
+    const productsFromProductsStore = shop.products ? shop.products.map((product)=> getProductById(product.id, products)) : []
     return (
         <View>
              <Text >{shop.name}</Text>
