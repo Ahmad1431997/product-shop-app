@@ -1,10 +1,11 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
+import { SHOP_DETAIL } from '../Navigation/types'
 
-const ShopItem = ({shop}) => {
+const ShopItem = ({shop,navigation}) => {
     return (
         <View>
-            <Text>{shop.name}</Text>
+            <Text onPress={()=> navigation.navigate(SHOP_DETAIL,{shop:shop})}>{shop.name}</Text>
             <Image style={styles.img} source={{uri:shop.image}}/>
         </View>
     )

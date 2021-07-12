@@ -7,20 +7,21 @@ import { Provider } from "react-redux";
 import store from "./store/reducers/index";
 import { NativeBaseProvider } from 'native-base';
 import ShopDetail from './components/ShopDetail';
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigator from './components/Navigation';
 
 export default function App() {
   return (
       <Provider store={store}>
         <NativeBaseProvider>
-
-    <View style={styles.container}>
-
-      {/* <ShopDetail/> */}
-      <Home />
-      {/* <ShopList/> */}
-      {/* <Text>Open up App.js to start working on your app!</Text> */}
+        
+      <NavigationContainer>
+    {/* <View style={styles.container}> */}
+        <StackNavigator/>
+      
+    {/* </View> */}
       <StatusBar style="auto" />
-    </View>
+      </NavigationContainer>
         </NativeBaseProvider>
       </Provider>
   );

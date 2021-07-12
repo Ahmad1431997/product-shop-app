@@ -1,8 +1,9 @@
 import { Center } from 'native-base'
 import React from 'react'
 import { StyleSheet, Text, View,TouchableOpacity, ImageBackground} from 'react-native'
+import { SHOP_LIST } from '../Navigation/types'
 
-export default function Home() {
+export default function Home({navigation}) {
     return (
         <Center flex={1} >
 
@@ -12,9 +13,9 @@ export default function Home() {
             <Text style={styles.description}>Where cookie maniacs gather</Text>
             {/* <Image style={styles.image} source={{uri:"https://i.pinimg.com/originals/8f/cf/71/8fcf719bce331fe39d7e31ebf07349f3.jpg"}} /> */}
             <TouchableOpacity
-        onPress={() => alert('Welcome')}
-        style={{ backgroundColor: 'blue',alignItems:"center" }}>
-        <Text style={{ fontSize: 20, color: '#fff' }}>Welcome</Text>
+        onPress={() => navigation.navigate(SHOP_LIST)}
+        style={{ /*backgroundColor: 'blue',*/alignItems:"center"}}>
+        <Text style={{ fontSize: 20, color: 'darkcyan' }}>shop list</Text>
       </TouchableOpacity>
       </ImageBackground>
         </View>
