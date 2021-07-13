@@ -9,3 +9,8 @@ export const FETCH_SHOPS = "FETCH_SHOPS"
 export const ADD_SHOPS = "ADD_SHOPS"
 
 export const SET_USER = "SET_USER"
+
+export const ADD_ITEM = "ADD_ITEM"
+
+export const DELETE_ITEM = "DELETE_ITEM";
+export const CHECK_OUT = "CHECK_OUT";
