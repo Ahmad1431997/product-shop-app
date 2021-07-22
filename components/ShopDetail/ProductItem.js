@@ -11,7 +11,7 @@ const ProductItem = ({product,navigation}) => {
     const dispatch = useDispatch();
     const [quantity,setQuantity]=useState(0);
     const handleAdd= ()=>{
-        const newItem = { quantity , productId:product.id }
+        const newItem = { quantity , productId:product.id,total:quantity*product.price }
         dispatch(addItemToCart(newItem));
     }
     return (

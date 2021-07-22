@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 import { createStackNavigator } from '@react-navigation/stack'
-import { HOME, CART_LIST, PRODUCT_DETAIL, SHOP_DETAIL, SHOP_LIST } from './types';
+import { HOME, CART_LIST, PRODUCT_DETAIL, SHOP_DETAIL, SHOP_LIST, SIGNIN, SIGNUP } from './types';
 import Home from '../Home';
 import ShopList from '../ShopList';
 import ShopDetail from '../ShopDetail';
@@ -10,6 +10,8 @@ import ShopDetail from '../ShopDetail';
 import ProductDetail from '../ProductDetail';
 import CartList from '../CartList';
 import CartButton from '../buttons/CartButton';
+import Signin from '../authentication/Signin';
+import Signup from '../authentication/Signup';
 const {Navigator,Screen} = createStackNavigator(); 
 const StackNavigator = () => {
     return (
@@ -41,6 +43,8 @@ const StackNavigator = () => {
             
         }} />
         <Screen name={CART_LIST} component={CartList} />
+        <Screen name={SIGNIN} component={Signin} options={{title:"Signin"}}/>
+        <Screen name={SIGNUP} component={Signup} options={{title:"Signup"}}/>
         </Navigator>
     )
 }

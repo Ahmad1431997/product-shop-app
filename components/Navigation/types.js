@@ -4,3 +4,7 @@ export const SHOP_DETAIL = "SHOP_DETAIL";
 export const PRODUCT_DETAIL="PRODUCT_DETAIL"
 
 export const CART_LIST = "CART_LIST"
+
+export const SIGNIN= "SIGNIN";
+
+export const SIGNUP= "SIGNUP";
